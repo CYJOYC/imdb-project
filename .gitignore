@@ -1,4 +1,8 @@
 
 target/
 dbt_modules/
+<<<<<<< HEAD
 logs/
+=======
+logs/
+>>>>>>> aa78f4f3ec9fac1a7a378c5817e43574ddff2c98
