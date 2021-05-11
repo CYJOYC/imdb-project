@@ -1,0 +1,35 @@
+
+version: 2
+
+sources:
+    - name: imdb
+      database: imdb
+      schema: public
+      tables:
+        - name: actor_sample
+        - name: cast_sample
+        - name: movie_info_sample
+        - name: cut1
+        - name: info_type
+        - name: movie_sample
+        - name: role_type
+
+
+models:
+    - name: my_first_dbt_model
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: my_second_dbt_model
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
