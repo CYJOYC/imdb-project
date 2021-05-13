@@ -34,5 +34,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   imdb:
       # Applies to all files under models/example/
-      dataeng:
+      example:
           materialized: view

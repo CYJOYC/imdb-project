@@ -1,4 +1,7 @@
+{{ config(materialized='incremental') }}
 SELECT i.movie_id, i.info_type_id, i.info, m.title, m.production_year
-FROM {{source('imdb', 'movie_info_sample')}} AS i INNER JOIN {{source('imdb', 'movie_sample')}} AS m
+FROM {{ref('movie_gross_info')}} AS i INNER JOIN {{source('imdb', 'movie_sample')}} AS m
 ON i.movie_id = m.id
-WHERE i.info_type_id = 107
+{% if is_incremental() %}
+Where m.production_year > (SELECT max(production_year) from {{ this }})
+{% endif %}
