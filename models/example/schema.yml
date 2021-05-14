@@ -16,115 +16,86 @@ sources:
 
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
+    - name: actor_in_movies_usa_avg_gross
+      description: ""
       columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
+        - name: id
+          description: "The primary key for this table"
+          tests:
+              - unique
+              - not_null
 
     - name: actor_in_movies_usa
-      description: "For each actor, understand the name and gross of movie they stared in US "
-      
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+      description: "For each actor, understands the name and gross earnings of movie they stared in US"
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    - name: actor_in_movies_worldwide_avg_gross
+      description: ""
 
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    - name: actor_in_movies_worldwide
+      description: "For each actor, understands the name and gross earnings of movie they stared worldwide"
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-                
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    - name: actor_with_roles
+      description: "This model contains the role of every actor in every movie"
 
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    - name: movie_genre_gross_sum_usa
+      description: ""
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-                
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    - name: movie_genre_gross_sum_worldwide
+      description: ""
 
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    - name: movie_genre_gross_sum
+      description: ""
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-                
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    - name: movie_genre_gross
+      description: "This model contains the gross earnings and genres for every movie in every country"
 
+    - name: movie_genre
+      description: "This model contains only the 'genres' info from movie information"
+
+    - name: movie_gross_info_extract_country_unit_gross_number
+      description: "This model extracts country, currency unit, amount of gross earnings of every movie"
+
+    - name: movie_gross_info_with_title
+      description: "This models contains the 'gross' information, movie title and production year for every movie"
+
+    - name: movie_gross_info
+      description: "This model contains only the 'gross' info from movie information"
+
+    - name: movie_gross_rank_china
+      description: "This model contains the top 10 movies with the highest gross earnings in China"
+
+    - name: movie_gross_rank_ecuador
+      description: "This model contains the top 10 movies with the highest gross earnings in Ecuador"
+
+    - name: movie_gross_rank_india
+      description: "This model contains the top 10 movies with the highest gross earnings in India"
+
+    - name: movie_gross_rank_italy
+      description: "This model contains the top 10 movies with the highest gross earnings in Italy"
+
+    - name: movie_gross_rank_japan
+      description: "This model contains the top 10 movies with the highest gross earnings in Japan"
+
+    - name: movie_gross_rank_usa
+      description: "This model contains the top 10 movies with the highest gross earnings in USA"
+
+    - name: movie_gross_rank_worldwide
+      description: "This model contains the top 10 movies with the highest gross earnings worldwide"
+
+    - name: movie_gross_rank
+      description: "This model contains the top 10 movies with the highest gross earnings in all countries, including worldwide category"
+
+    - name: movie_gross_to_usd
+      description: "This model contains gross earnings in USD for every movie in every country"
+
+    - name: movies_count_actor
+      description: "This model get the top 1000 records of the numbers of movies actors played"
+
+    - name: movies_count_actress
+      description: "This model get the top 1000 records of the numbers of movies actresses played"
+
+    - name: movies_count_average
+      description: "This model counts the average numbers of movies played for the top 1000 actors and top 1000 actresses respectively"
+
+    - name: role_count_for_each_actor
+      description: "This model contains and ranks the number of roles each actor and actress has in all their movies"
