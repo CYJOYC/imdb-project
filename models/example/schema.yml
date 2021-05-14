@@ -17,19 +17,15 @@ sources:
 
 models:
     - name: actor_in_movies_usa_avg_gross
-      description: ""
-      columns:
-        - name: id
-          description: "The primary key for this table"
-          tests:
-              - unique
-              - not_null
+      description: "For each actor, understands the total number of movies and the average gross per movie they starred in the US.
+                    Understand if famous actors have high every gross."
 
     - name: actor_in_movies_usa
-      description: "For each actor, understands the name and gross earnings of movie they stared in US"
+      description: "For each actor, understands the name and gross earnings of movie they stared in the US"
 
     - name: actor_in_movies_worldwide_avg_gross
-      description: ""
+      description: "For each actor, understands the total number of movies and the average gross per movie they starred in the worldwide.
+                    Understand if famous actors have high every gross"
 
     - name: actor_in_movies_worldwide
       description: "For each actor, understands the name and gross earnings of movie they stared worldwide"
@@ -38,13 +34,13 @@ models:
       description: "This model contains the role of every actor in every movie"
 
     - name: movie_genre_gross_sum_usa
-      description: ""
+      description: "Understands the US gross for each genre"
 
     - name: movie_genre_gross_sum_worldwide
-      description: ""
+      description: "Understands the worldwide gross for each genre"
 
     - name: movie_genre_gross_sum
-      description: ""
+      description: "For all countries, understands the gross of each genre"
 
     - name: movie_genre_gross
       description: "This model contains the gross earnings and genres for every movie in every country"
